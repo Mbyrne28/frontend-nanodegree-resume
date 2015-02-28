@@ -1,1 +1,1 @@
-var awesomeThoughts = "I am awesome!";
+var awesomeThoughts = "I am totally awesome!";
