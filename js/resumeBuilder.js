@@ -105,6 +105,7 @@ addContent(HTMLskills, bio.skills, "#topContacts");
 addContent(HTMLWelcomeMsg, bio.welcomeMSG, "#topContacts");
 addContent(HTMLemail, bio.contactInfo.email, "#topContacts");
 addContent(HTMLworkEmployer, bio.work.employer, "#topContacts");
+addContent(HTMLworkEmployer, bio.work.position, "#topContacts");
 
 function addContent(htmlSection, bioItem, where){
 
