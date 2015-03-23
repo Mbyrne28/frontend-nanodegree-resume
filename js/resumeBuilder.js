@@ -1,120 +1,92 @@
-var awesomeThoughts = "I am totally awesome!";
-
-var funThoughts = awesomeThoughts.replace("awesome", "Fun");
-
-//console.log(awesomeThoughts);
-//console.log(funThoughts);
-
-//$("#main").append(funThoughts);
-//var myName = "Matthew Byrne";
-//var formattedName = HTMLheaderName.replace("%data%",myName);
-
-//var myRole = "Front-end Ninja";
-//var formattedRole = HTMLheaderRole.replace("%data%",myRole);
-
-//$("#main").prepend(formattedRole);
-//$("#main").prepend(formattedName);
-
-//"audacity" to "Udacity".
-//var wrong = "audacity";
-
-//var firstCharUpper = wrong.charAt(1).toUpperCase();
-//var right = firstCharUpper +  wrong.slice(2,wrong.length);
-
-function stripCapitalise(s) {
-
-    s = s.charAt(1).toUpperCase() + s.slice(2, s.length);
-
-    return s;
-};
-
-//console.log(stripCapitalise("audacity"));
-//debug(stripCapitalise("audacity"));
-//***************************//
-
-var sampleArray = [0, 0, 7];
-
-var incrementLastArrayElement = function(_array) {
-    var newArray = [];
-    // Your code should make newArray equal to an array that has the same
-    // values as _array, but the last number has increased by one.
-
-    // For example:
-    // _array = [1, 2, 3];
-    // turns into:
-    // newArray = [1, 2, 4];
-
-    // Your code goes in here!
-    newArray = _array;
-
-    newArray[newArray.length - 1] = newArray[newArray.length - 1] + 1;
-
-    // Don't delete this line!
-    return newArray;
-};
-
-// Did your code work? The line below will tell you!
-//debug(incrementLastArrayElement(sampleArray));
-
-
-//var name = "AlbERt EINstEiN";
-var name = "Larry MADRIGAL";
-
-function nameChanger(oldName) {
-    var finalName = oldName;
-    // Your code goes here!
-    finalName = finalName.split(' ');
-    finalName = finalName[0].toLowerCase() + ' ' + finalName[1].toUpperCase();
-    finalName = finalName.slice(0,1).toUpperCase()+finalName.slice(1,finalName.length-1);
-
-    
-    // Don't delete this line!
-    return finalName;
-};
-
-// Did your code work? The line below will tell you!
-//debug(nameChanger(name));
-
 var bio = {
-"name": "Matthew Byrne",
-"role": "Web Ninja",
-"contactInfo":{
-    "email":"matt.byrne@yahoo.co.uk"
-},
-"welcomeMSG": "Hello there!",
-"skills": ["Thinking", "Presenting", "Design"],
-"bioPic": "images/fry.jpg"
+    "name": "Matthew Byrne",
+    "role": "UX Ninja",
+    "contacts": {
+        "mobile": "07790 997 661",
+        "email": "matt.byrne@yahoo.co.uk",
+        "github": "string",
+        "twitter": "string",
+        "location": "string"
+    },
+    "welcomeMessage": "Hello world, how are you?",
+    "skills": [
+        "Typing",
+        "Listening",
+        "Design"
+    ],
+    "biopic": "images/fry.jpg",
+    "display": "function taking no parameters"
+};
+
+var education = {
+    "schools": [
+        {
+            "name": "string",
+            "location": "string",
+            "degree": "string",
+            "majors": "array of strings",
+            "dates": "integer (graduation date)",
+            "url": "string"
+        }
+    ],
+    "onlineCourses": [
+        {
+            "title": "string",
+            "school": "string",
+            "date": "integer (date finished)",
+            "url": "string"
+        }
+    ],
+    "display": "function taking no parameters"
+};
+
+var work = {
+    "jobs": [
+        {
+            "employer": "string",
+            "title": "string",
+            "location": "string",
+            "dates": "string (works with a hyphen between them)",
+            "description": "string"
+        }
+    ],
+    "display": "function taking no parameters"
+};
+
+var projects = {
+    "projects": [
+        {
+            "title": "string",
+            "dates": "string (works with a hyphen between them)",
+            "description": "string",
+            "images": "array with string urls"
+        }
+    ],
+    "display": "function taking no parameters"
 }
-//debug(bio["skills"])
-//var formattedSkills = HTMLskills.replace("%data%",bio["skills"]);
-//$("#topContacts").prepend(formattedSkills);
-//var formattedWelcome = HTMLWelcomeMsg.replace("%data%",bio["welcomeMSG"]);
-//$("#main").prepend(formattedWelcome);
-//var formattedEmail = HTMLemail.replace("%data%",bio.contactInfo.email);
-//$("#topContacts").prepend(formattedEmail);
-var formattedRole = HTMLheaderRole.replace("%data%",bio["role"]);
-$("#main").prepend(formattedRole);
-var formattedName = HTMLheaderName.replace("%data%",bio["name"]);
-$("#main").prepend(formattedName);
-var bioPic = HTMLbioPic.replace("%data%",bio["bioPic"]);
-$("#topContacts").prepend(bioPic);
-
-bio.work = {"employer":"Saatchi", "position":"copywriter"};
-
-addContent(HTMLskills, bio.skills, "#topContacts");
-addContent(HTMLWelcomeMsg, bio.welcomeMSG, "#topContacts");
-addContent(HTMLemail, bio.contactInfo.email, "#topContacts");
-addContent(HTMLworkEmployer, bio.work.employer, "#topContacts");
-addContent(HTMLworkEmployer, bio.work.position, "#topContacts");
-
-function addContent(htmlSection, bioItem, where){
-
-    var contentItem = htmlSection.replace("%data%", bioItem);
-    $(where).prepend(contentItem);
-
-}
 
 
+/*
+var formattedName = HTMLheaderName.replace("%data%", bio.name)
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role)
+var formattedContactGeneric = HTMLcontactGeneric.replace("%data%", bio.contacts.mobile)
 
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
 
+$("#topContacts").prepend(formattedContactGeneric);
 
+console.log(formattedName)*/
+//debug("hello")
+
+//for (item in bio){
+  //debug(bio[item])
+  //$("#topContacts").prepend(bio[item]);
+//}
+
+//function addContent(htmlSection, bioItem, where){
+
+//    var contentItem = htmlSection.replace("%data%", bioItem);
+//    $(where).prepend(contentItem);
+
+//}
